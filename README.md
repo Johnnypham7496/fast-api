@@ -90,3 +90,4 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Depneding on the project, you could have multiple Env variables and the most common case that can happen is forgetting to add a env variable. The best way to cover this is to create a validation method to check and make sure all the properties is there otherwise the application may crash. 
 
 - You can add the env variables onto your local machine but it is a large amount of work to preform and it's not the most optimal way to create and store them
+<hr>
