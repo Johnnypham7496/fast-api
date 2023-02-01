@@ -1,0 +1,1 @@
+# dummy file for when creating new directories, this implies specifically to python
