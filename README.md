@@ -11,7 +11,7 @@ FastAPI documentation: https://fastapi.tiangolo.com/
 
 2. Create a virtual environment with `py -3 -m venv venv`
 
-3. Turn on virtual environment with `. venv/Scripts/activate.bat`
+3. Turn on virtual environment with `. venv/Scripts/activate`
 
 4. Install fastapi with `pip install fastapi[all]` 
 - [all] this will install all dependencies related to fastapi
