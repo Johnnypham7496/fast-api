@@ -91,3 +91,13 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - You can add the env variables onto your local machine but it is a large amount of work to preform and it's not the most optimal way to create and store them
 <hr>
+
+<h2>Database Migrations</h2>
+
+- Developers can track changes to code and rollback code easily with GIT. Why can't we do the same for database models/tables?
+
+- Database Migrations will allow us to incrementally track changes to database schema and rollback chagnes to any point in time
+
+- We will use a tool called Alembic to make cahnges to our database
+ 
+- Alembus can also automatically pull database models from Sqlalchemy and generate the proper tables
