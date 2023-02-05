@@ -100,4 +100,4 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - We will use a tool called Alembic to make cahnges to our database
  
-- Alembus can also automatically pull database models from Sqlalchemy and generate the proper tables
+- Alembic can also automatically pull database models from Sqlalchemy and generate the proper tables
