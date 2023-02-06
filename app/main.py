@@ -4,7 +4,7 @@ from .database import engine
 from .routers import post, user, auth, vote
 from .config import settings
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine) we no longer this line because of alembic. This line would run and create all the models associated with out model.py
 
 app = FastAPI()
 
