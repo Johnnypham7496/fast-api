@@ -3,10 +3,21 @@ from . import models
 from .database import engine
 from .routers import post, user, auth, vote
 from .config import settings
+from fastapi.middleware.cors import CORSMiddleware
 
 # models.Base.metadata.create_all(bind=engine) we no longer this line because of alembic. This line would run and create all the models associated with out model.py
 
 app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # dictionary that we created at the beginning to use as a example
 my_post = [
