@@ -108,3 +108,19 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 -   Cross Origin Resouce Sharing`(CORS)` allows you to make requests from the web browser on one domain to a server on a different domain
 
 - By default our API will only allow webbrowsers running on the same domain as our server to make requests to it
+<hr>
+
+<h2>Git</h2>
+
+- Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows
+
+- The most important part of Git is to have a `.gitignore`. There are files and folders that we <strong>DO NOT</strong> want to check into git because this will be in public view. It is <strong>CRUCIAL</strong> that everything is added to .gitignore before commiting otherwise it will be very difficult to remove from github/gitlab
+
+- It is standard to never include the virtual environment when checking into git. Instead it is best practice to use a `requirements.txt`. This file will show the user a list of dependencies and versions that was being used when creating this repository/project. 
+<hr>
+
+<h2>Heroku</h2>
+
+- For this project I am using Heroku to deploy the application so that anyone get access the API created here. Keep in mind that Heroku at the end of 2022 stop hosting apps for free as goes the same for other hosting services. You will need to at a credit card for verification purposes. The apps that are being deployed will be free up to a certain point. After that charges may apply. 
+
+- https://devcenter.heroku.com/articles/getting-started-with-python - By following this link, the instructions will show you how to setup Heroku for python. There are also different instructions for different languages. 
