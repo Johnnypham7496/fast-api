@@ -124,3 +124,5 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - For this project I am using Heroku to deploy the application so that anyone get access the API created here. Keep in mind that Heroku at the end of 2022 stop hosting apps for free as goes the same for other hosting services. You will need to at a credit card for verification purposes. The apps that are being deployed will be free up to a certain point. After that charges may apply. 
 
 - https://devcenter.heroku.com/articles/getting-started-with-python - By following this link, the instructions will show you how to setup Heroku for python. There are also different instructions for different languages. 
+
+- Part of having the app to run on Heroku is to have a Profile which is a file that will tell our host platform the commands that will run out app
