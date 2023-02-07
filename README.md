@@ -117,3 +117,10 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - The most important part of Git is to have a `.gitignore`. There are files and folders that we <strong>DO NOT</strong> want to check into git because this will be in public view. It is <strong>CRUCIAL</strong> that everything is added to .gitignore before commiting otherwise it will be very difficult to remove from github/gitlab
 
 - It is standard to never include the virtual environment when checking into git. Instead it is best practice to use a `requirements.txt`. This file will show the user a list of dependencies and versions that was being used when creating this repository/project. 
+<hr>
+
+<h2>Heroku</h2>
+
+- For this project I am using Heroku to deploy the application so that anyone get access the API created here. Keep in mind that Heroku at the end of 2022 stop hosting apps for free as goes the same for other hosting services. You will need to at a credit card for verification purposes. The apps that are being deployed will be free up to a certain point. After that charges may apply. 
+
+- https://devcenter.heroku.com/articles/getting-started-with-python - By following this link, the instructions will show you how to setup Heroku for python. There are also different instructions for different languages. 
