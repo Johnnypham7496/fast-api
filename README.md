@@ -108,3 +108,12 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 -   Cross Origin Resouce Sharing`(CORS)` allows you to make requests from the web browser on one domain to a server on a different domain
 
 - By default our API will only allow webbrowsers running on the same domain as our server to make requests to it
+<hr>
+
+<h2>Git</h2>
+
+- Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows
+
+- The most important part of Git is to have a `.gitignore`. There are files and folders that we <strong>DO NOT</strong> want to check into git because this will be in public view. It is <strong>CRUCIAL</strong> that everything is added to .gitignore before commiting otherwise it will be very difficult to remove from github/gitlab
+
+- It is standard to never include the virtual environment when checking into git. Instead it is best practice to use a `requirements.txt`. This file will show the user a list of dependencies and versions that was being used when creating this repository/project. 
