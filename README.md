@@ -74,7 +74,7 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>JWT Tokens</h2>
 
-- A JWT Token is something the API gives to the user once they login with their credentials. <strong><em>A Token is not the same as an encryption</em></strong><br>
+- A `JWT Token` is something the API gives to the user once they login with their credentials. <strong><em>A Token is not the same as an encryption</em></strong><br>
 - A JWT Token consists of 3 parts: 
     - Header: Algorithum and token type/metadata about the token
 
@@ -87,9 +87,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Is a varible that is configured on a computer. Some of the things on this code has been hard coded such as our sql connection that has our login information or our JWT token with containing the secret key. These should never be hard coded because once our code is push into github/gitlab, it will be visible to the public which can cause a potenial hack if someone reviews our code. 
 
-- Depneding on the project, you could have multiple Env variables and the most common case that can happen is forgetting to add a env variable. The best way to cover this is to create a validation method to check and make sure all the properties is there otherwise the application may crash. 
+- Depneding on the project, you could have multiple `Env variables` and the most common case that can happen is forgetting to add a env variable. The best way to cover this is to create a validation method to check and make sure all the properties is there otherwise the application may crash. 
 
-- You can add the env variables onto your local machine but it is a large amount of work to preform and it's not the most optimal way to create and store them
+- You can add `env variables` onto your local machine but it is a large amount of work to preform and it's not the most optimal way to create and store them
 <hr>
 
 <h2>Database Migrations</h2>
@@ -98,6 +98,13 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Database Migrations will allow us to incrementally track changes to database schema and rollback chagnes to any point in time
 
-- We will use a tool called Alembic to make cahnges to our database
+- We will use a tool called `Alembic` to make cahnges to our database
  
-- Alembic can also automatically pull database models from Sqlalchemy and generate the proper tables
+- `Alembic` can also automatically pull database models from Sqlalchemy and generate the proper tables
+<hr>
+
+<h2>CORS</h2>
+
+-   Cross Origin Resouce Sharing`(CORS)` allows you to make requests from the web browser on one domain to a server on a different domain
+
+- By default our API will only allow webbrowsers running on the same domain as our server to make requests to it
