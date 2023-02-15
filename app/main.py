@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# 2 code below if for the appmiddleware so other sites can access our api such as google, youtube, etc. This can also be set for specific sites
 origins = ["*"]
 
 app.add_middleware(
