@@ -129,3 +129,10 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Remember that when psuhing commit to git you will have to push to heroku as well after git. To add tables to the database(this implies if you are using alembic) you will need to run the following command into the termainal: `heroku run alembic upgrade head` 
     - Notice how alembic upgrade head is the same as when we were making updates to the local database but now you will need to let heroku know to run this code
+<hr>
+
+<h2>Ubuntu Server</h2>
+
+- There is a section of the video of where it explains how to deploy our app with Ubuntu Server. I did not spend too much time during this part but a lot of the configuration will come from the termainal. This is an alternative way of deployment beisdes using Heroku.
+
+<hr>
