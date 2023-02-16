@@ -143,5 +143,13 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Ubuntu Server</h2>
 
-- There is a section of the video of where Sanjeev explains how to deploy our app with Ubuntu Server. I did not spend too much time during this part but a lot of the configuration will come from the termainal. This is an alternative way of deployment beisdes using Heroku.
+- There is a section of the video of where Sanjeev explains how to deploy our app with Ubuntu Server which is `Linux` based. I did not spend too much time during this part but a lot of the configuration will come from the termainal. This is an alternative way of deployment beisdes using Heroku.
 <hr>
+
+<h2>Docker</h2>
+
+- Docker documentation for python: https://hub.docker.com/_/python
+
+- Another common platform that people use is `Docker`
+
+- Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers
