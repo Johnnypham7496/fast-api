@@ -38,6 +38,8 @@ FastAPI documentation: https://fastapi.tiangolo.com/
 
 <h2>Databases</h2>
 
+- `Postgres Tutorial`: https://www.postgresqltutorial.com/
+
 - Databases is collection of organized data that can easily be accessed and managed <br>
 Normally the will be a database management system aka <strong>DBMS</strong> that a user will send requests to, then DBMS will preform the operation to the database and send the result back to the user so technically a user will never directly work with the database <br><br>
 
@@ -94,6 +96,8 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Database Migrations</h2>
 
+- `Alembic Documentation`: https://alembic.sqlalchemy.org/en/latest/tutorial.html
+
 - Developers can track changes to code and rollback code easily with GIT. Why can't we do the same for database models/tables?
 
 - Database Migrations will allow us to incrementally track changes to database schema and rollback chagnes to any point in time
@@ -112,6 +116,8 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Git</h2>
 
+- `Git tutorial`: https://git-scm.com/docs/gittutorial
+
 - Git is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows
 
 - The most important part of Git is to have a `.gitignore`. There are files and folders that we <strong>DO NOT</strong> want to check into git because this will be in public view. It is <strong>CRUCIAL</strong> that everything is added to .gitignore before commiting otherwise it will be very difficult to remove from github/gitlab
@@ -120,6 +126,10 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 <hr>
 
 <h2>Heroku</h2>
+
+- `Herkou Tutorial`: https://devcenter.heroku.com/articles/getting-started-with-python
+
+- `Connecting Heroku to Postgres`: https://devcenter.heroku.com/categories/heroku-postgres
 
 - For this project I am using Heroku to deploy the application so that anyone get access the API created here. Keep in mind that Heroku at the end of 2022 stop hosting apps for free as goes the same for other hosting services. You will need to at a credit card for verification purposes. The apps that are being deployed will be free up to a certain point. After that charges may apply. 
 
@@ -133,6 +143,5 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Ubuntu Server</h2>
 
-- There is a section of the video of where it explains how to deploy our app with Ubuntu Server. I did not spend too much time during this part but a lot of the configuration will come from the termainal. This is an alternative way of deployment beisdes using Heroku.
-
+- There is a section of the video of where Sanjeev explains how to deploy our app with Ubuntu Server. I did not spend too much time during this part but a lot of the configuration will come from the termainal. This is an alternative way of deployment beisdes using Heroku.
 <hr>
