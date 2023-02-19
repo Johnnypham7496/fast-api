@@ -29,7 +29,7 @@ FastAPI documentation: https://fastapi.tiangolo.com/
 
 <h2>4 major calls in api/HTTP method called CRUD:</h2>
 
--    `C post` - create a record <br> 
+-   `C post` - create a record <br> 
 -   `R get`- retrieve a record <br>
 -   `U put` - modify/update record <br>
 -   `D delete` - deletes a record <br>
