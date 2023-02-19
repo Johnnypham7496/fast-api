@@ -7,6 +7,9 @@ services:
         - postgres
     ports: 
         - 8000:8000
+    volumes:    # this is considered a bind mount
+        - ./:/usr/src/app:ro  # this will ensure that any changes made to our code this will also add the changes to the container without having the container change any of the code
+    command: uvicorn app.main:app --host 0.0.0.0 --post 8000 --reload
     # env_file:       instead of writing all of our variables out we can simply have this file point to our desired env file
     #     - ./.env 
     environment: 
