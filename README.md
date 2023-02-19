@@ -152,4 +152,4 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Another common platform that people use is `Docker`
 
-- Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers
+- Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
