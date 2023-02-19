@@ -153,3 +153,11 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Another common platform that people use is `Docker`
 
 - Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+
+<h2>Testing</h2>
+
+- `Pytest documentation`: https://docs.pytest.org/en/7.2.x/
+
+- Who better to test the code than the person who wrote the code?
+
+- DevOps Testing is the process of automating and smoothing out the entire delivery lifecycle of software. A lot of companies employ DevOps testing strategies by starting with the agile practice of Continuous Integration (CI)
