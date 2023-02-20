@@ -4,7 +4,7 @@ from app.calculations import add, subtract, multiply, divide, BankAccount
 @pytest.fixture
 def zero_bank_account():
     return BankAccount(0)
-    
+
 
 @pytest.fixture
 def bank_account():
@@ -55,8 +55,12 @@ def test_collect_interest(bank_account):
     assert round(bank_account.balance, 6) == 55
 
 
-def test_bank_transaciton(zero_bank_account):
-    zero_bank_account.deposit(200)
-    zero_bank_account.withdraw(100)
-    zero_bank_account.collect_interest()
-    assert round(zero_bank_account.balance, 6) == 110
+@pytest.mark.parametrize("deposited, withdrew, expected", [
+    (200, 100, 100),
+    (50, 10, 40),
+    (1200, 200, 1000)
+])
+def test_bank_transaciton(zero_bank_account, deposited, withdrew, expected):
+    zero_bank_account.deposit(deposited)
+    zero_bank_account.withdraw(withdrew)
+    assert zero_bank_account.balance == expected
