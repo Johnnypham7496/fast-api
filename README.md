@@ -135,7 +135,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - https://devcenter.heroku.com/articles/getting-started-with-python - By following this link, the instructions will show you how to setup Heroku for python. There are also different instructions for different languages. 
 
-- Part of having the app to run on Heroku is to have a Profile which is a file that will tell our host platform the commands that will run out app
+- For the apps to run successfully in Heroku, you will need to push all changes to github/gitlab and create the request to push changes into the main branch. Once that process is complete, type `git push heroku main` into the terminal to have those changes push into Heroku. 
+
+- Part of having the app to run on Heroku is to have a `Procfile` which is a file that will tell our host platform the commands that will run out app. When deploying apps, there needs to be a file with instructions to tell the platform the commands it needs to run our app
 
 - Remember that when psuhing commit to git you will have to push to heroku as well after git. To add tables to the database(this implies if you are using alembic) you will need to run the following command into the termainal: `heroku run alembic upgrade head` 
     - Notice how alembic upgrade head is the same as when we were making updates to the local database but now you will need to let heroku know to run this code
