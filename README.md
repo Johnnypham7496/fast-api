@@ -161,3 +161,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Who better to test the code than the person who wrote the code?
 
 - DevOps Testing is the process of automating and smoothing out the entire delivery lifecycle of software. A lot of companies employ DevOps testing strategies by starting with the agile practice of Continuous Integration (CI)
+
+- Start by adding `pip install pytest`. By entering `pytest` into the terminal, this will run any test functions that you have created. I created a separate folder that holds all of the test files and created routes that will test our code in files within the app directory. 
+
+- Use `pytest -v -s` to give you more details from every test that is being conducted. Without running `-v -s` will give you green periods for passing and red periods for failing which is a more simply way of looking at the results it prefered.
+
+- When conducting multiple tests, you can either run them all and check for which ones have failed or you can add `-x` to `pytest -v -s` to have the testing stop as soon as a test fails. 
