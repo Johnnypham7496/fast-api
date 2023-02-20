@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from . import models
 from .database import engine
 from .routers import post, user, auth, vote
@@ -33,7 +33,7 @@ app.include_router(auth.router)
 app.include_router(vote.router)
 
 # code below is consider a path operation/route
-@app.get("/")     # get is sending a get request to the api. There are other decoratores that can be used such as POST, PUT, DELETE, GET
+@app.get("/", status_code=status.HTTP_200_OK)     # get is sending a get request to the api. There are other decoratores that can be used such as POST, PUT, DELETE, GET
 def root():              # the name for the function does not matter but preferred to be descriptive
     return {"message": "Hello World"}      # this is the data that is sent back to the user, this can be changed
 
