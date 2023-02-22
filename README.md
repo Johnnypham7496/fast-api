@@ -62,9 +62,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Object Relational Mapper(ORM)</h2>
 
-- This is another way to interact with database but instead of using raw SQL code, we can use python languae itself that will translate to SQL. FastAPI <---> ORM <---> SQL<br>
+- This is another way to interact with database but instead of using raw SQL code, we can use python language itself that will translate to SQL. FastAPI <---> ORM <---> SQL<br>
 
-- The most popular python ORMs is `Sqlalchemy`. It is a standalone library and has no association with FastAPI. It can be user with any other pthin web frameworks or any python based application
+- The most popular python ORMs is `Sqlalchemy`. It is a standalone library and has no association with FastAPI. It can be used with any python web frameworks or any python based application
 
 - `pip install sqlalchemy` to download sqlalchemy. I am currently using version 1.4.46
    - Sqlalchemy does not know how to communicate to a database so you will need a database driver. We've already been using postgres database and had psycopg2 installed but as for refrence if you are installing Sqlalchemy first, you will need a database driver so that Sqlalchemy can communicate with the database
