@@ -62,9 +62,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 <h2>Object Relational Mapper(ORM)</h2>
 
-- This is another way to interact with database but instead of using raw SQL code, we can use python languae itself that will translate to SQL. FastAPI <---> ORM <---> SQL<br>
+- This is another way to interact with database but instead of using raw SQL code, we can use python language itself that will translate to SQL. FastAPI <---> ORM <---> SQL<br>
 
-- The most popular python ORMs is `Sqlalchemy`. It is a standalone library and has no association with FastAPI. It can be user with any other pthin web frameworks or any python based application
+- The most popular python ORMs is `Sqlalchemy`. It is a standalone library and has no association with FastAPI. It can be used with any python web frameworks or any python based application
 
 - `pip install sqlalchemy` to download sqlalchemy. I am currently using version 1.4.46
    - Sqlalchemy does not know how to communicate to a database so you will need a database driver. We've already been using postgres database and had psycopg2 installed but as for refrence if you are installing Sqlalchemy first, you will need a database driver so that Sqlalchemy can communicate with the database
@@ -135,7 +135,9 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - https://devcenter.heroku.com/articles/getting-started-with-python - By following this link, the instructions will show you how to setup Heroku for python. There are also different instructions for different languages. 
 
-- Part of having the app to run on Heroku is to have a Profile which is a file that will tell our host platform the commands that will run out app
+- For the apps to run successfully in Heroku, you will need to push all changes to github/gitlab and create the request to push changes into the main branch. Once that process is complete, type `git push heroku main` into the terminal to have those changes push into Heroku. 
+
+- Part of having the app to run on Heroku is to have a `Procfile` which is a file that will tell our host platform the commands that will run out app. When deploying apps, there needs to be a file with instructions to tell the platform the commands it needs to run our app
 
 - Remember that when psuhing commit to git you will have to push to heroku as well after git. To add tables to the database(this implies if you are using alembic) you will need to run the following command into the termainal: `heroku run alembic upgrade head` 
     - Notice how alembic upgrade head is the same as when we were making updates to the local database but now you will need to let heroku know to run this code
@@ -160,4 +162,16 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Who better to test the code than the person who wrote the code?
 
+- Currently using `pytest` to write and create fixtures for testing. `Pytest fixtures` are functions that can be used to manage our apps states and dependencies. Most importantly, they can provide data for testing and a wide range of value types when explicitly called by our testing software. You can use the mock data that fixtures create across multiple tests
+
+- Fixtures can be configured to be dependant on another fixture "passing a fixture as an aruguement into another"
+
 - DevOps Testing is the process of automating and smoothing out the entire delivery lifecycle of software. A lot of companies employ DevOps testing strategies by starting with the agile practice of Continuous Integration (CI)
+
+- Start by adding `pip install pytest`. By entering `pytest` into the terminal, this will run any test functions that you have created. I created a separate folder that holds all of the test files and created routes that will test our code in files within the app directory. 
+
+- Use `pytest -v -s` to give you more details from every test that is being conducted. Without running `-v -s` will give you green periods for passing and red periods for failing which is a more simply way of looking at the results it prefered.
+
+- When conducting multiple tests, you can either run them all and check for which ones have failed or you can add `-x` to `pytest -v -s` to have the testing stop as soon as a test fails.
+
+- When creating test for your code, there are some cases where you would need to add testing data to a database but never to the active database. Instead you would want to create a test database that will delete the data after testing is over. 
