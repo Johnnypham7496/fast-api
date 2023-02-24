@@ -175,3 +175,15 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - When conducting multiple tests, you can either run them all and check for which ones have failed or you can add `-x` to `pytest -v -s` to have the testing stop as soon as a test fails.
 
 - When creating test for your code, there are some cases where you would need to add testing data to a database but never to the active database. Instead you would want to create a test database that will delete the data after testing is over. 
+
+- For certain tests, the last slash "/users/" will matter. FastAPI can reroute the request to a test database but will give off a differnt status code causing the test to fail if the code requires a result of status code
+
+- Fixtures have different `scopes`
+    - Example on how to user scopes: `@pytest.fixture(scope="function")`
+    - `function`: the default scope, the fixture is destroyed at the end of the test
+    - `class`: the fixture is destroyed during teardown of the last test in the class
+    - `module`: the fixture is destroyed during the teardown of the last test in the module
+    - `package`: the fixture is destroyed during teardown of the last test in the package
+    - `session`: the fixture is destroyed at the end of the test session
+
+- Fixtures can rely on other fixtures but tests should not rely on other tests which is considered as bad practice.
