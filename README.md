@@ -186,4 +186,6 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
     - `package`: the fixture is destroyed during teardown of the last test in the package
     - `session`: the fixture is destroyed at the end of the test session
 
-- Fixtures can rely on other fixtures but tests should not rely on other tests which is considered as bad practice.
+- Fixtures can rely on other fixtures but tests should not rely on other tests which is considered as bad practice
+
+- Creating a conftest within the test folder will allow pytest to define fixtures and give access to all test file with in the folder but conftest is specific to the directory so you have multiple test folders than you would need separate conftests file within those folders
