@@ -101,5 +101,5 @@ def test_posts(test_user, session):
     #                 models.Post(title="3rd title", content="3rd content", owner_id=test_user['id'])])
 
     session.commit()
-    posts = session.query(models.Posts).all()
+    posts = session.query(models.Post).all()
     return posts
