@@ -8,6 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from app.database import get_db, Base
 from app.oauth2 import create_access_token
+from app import models
 
 
 
@@ -67,3 +68,38 @@ def authorized_client(client, token):
     }
 
     return client
+
+
+@pytest.fixture
+def test_posts(test_user, session):
+    posts_data = [{
+        "title": "first title",
+        "content": "first content",
+        "owner_id": test_user['id']
+    }, 
+    {
+        "title": "2nd title",
+        "content": "2nd content",
+        "owner_id": test_user['id']
+    },
+    {
+        "title": "3rd title",
+        "content": "3rd content",
+        "owner_id": test_user['id']
+    }]
+
+    # this function can turn our data from the dictionary and convert it to the models.Post. An alternative than hard coding all the data
+    def create_post_model(post):
+        return models.Post(**post)
+
+    post_map = map(create_post_model, posts_data)
+    posts = list(post_map)
+
+    session.add_all(posts)
+    # session.add_all([models.Post(title="first title", content="first content", owner_id=test_user['id']),
+    #                 models.Post(title="2nd title", content="2nd content", owner_id=test_user['id']),
+    #                 models.Post(title="3rd title", content="3rd content", owner_id=test_user['id'])])
+
+    session.commit()
+    posts = session.query(models.Posts).all()
+    return posts
