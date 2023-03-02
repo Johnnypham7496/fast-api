@@ -49,3 +49,18 @@ def test_create_post(authorized_client, test_user, test_posts, title, content, p
     assert created_post.content == content
     assert created_post.published == published
     assert created_post.owner_id == test_user['id']
+
+
+def test_create_post_default_published_true(authorized_client, test_user, test_posts):
+    res = authorized_client.post("/posts/", json={"title": "arbitrary title", "content": "ioeknfosiej"})
+    created_post = schemas.Post(**res.json())
+    assert res.status_code == 201
+    assert created_post.title == "arbitrary title"
+    assert created_post.content == "ioeknfosiej"
+    assert created_post.published == True
+    assert created_post.owner_id == test_user['id']
+
+
+def test_unauthorized_user_create_post(client, test_posts, test_user):
+    res = client.post("/posts/", json={"title": "arbitrary title", "content": "ioeknfosiej"})
+    assert res.status_code == 401
