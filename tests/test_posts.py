@@ -1,5 +1,5 @@
 # testing posts
-from typing import List
+import pytest
 from app import schemas
 
 
@@ -34,3 +34,18 @@ def test_get_one_post(authorized_client, test_posts):
     assert post.Post.id == test_posts[0].id
     assert post.Post.content == test_posts[0].content
     assert post.Post.title == test_posts[0].title
+
+
+@pytest.mark.parametrize("title, content, published", [
+    ("awesome new title", "awesome new content", True),
+    ("favorite pizza", "i love pepperoni", False),
+    ("tallest skyscrappers", "wahoo", True)
+])
+def test_create_post(authorized_client, test_user, test_posts, title, content, published):
+    res = authorized_client.post("/posts/", json={"title": title, "content": content, "published": published})
+    created_post = schemas.Post(**res.json())
+    assert res.status_code == 201
+    assert created_post.title == title
+    assert created_post.content == content
+    assert created_post.published == published
+    assert created_post.owner_id == test_user['id']
