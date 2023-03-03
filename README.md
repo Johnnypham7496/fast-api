@@ -155,6 +155,7 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Another common platform that people use is `Docker`
 
 - Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+<hr>
 
 <h2>Testing</h2>
 
@@ -189,3 +190,10 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Fixtures can rely on other fixtures but tests should not rely on other tests which is considered as bad practice
 
 - Creating a conftest within the test folder will allow pytest to define fixtures and give access to all test file with in the folder but conftest is specific to the directory so you have multiple test folders than you would need separate conftests file within those folders
+<hr>
+
+<h2>CI/CD</h2>
+
+- `Continuous Integration` - automated process to build, package and test applications
+
+- `Continuous Delivery` - picks up where continuous integrations ends and automated the delivery of applications
