@@ -197,3 +197,10 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - `Continuous Integration` - automated process to build, package and test applications
 
 - `Continuous Delivery` - picks up where continuous integrations ends and automated the delivery of applications
+
+- Manual Process: Make Changes -> Commit Changes -> Run Tests -> Build Image -> Deploy
+- Automated CI/CD: Makes Changes -> Commit Changes ->
+    Continuous Integration: Pull Source Code -> Install Dependencies -> Run Automated Tests -> Build Images(Docker)
+    Continuous Delivery: Grab images/code -> Update Production
+
+- Most common CI/CD pipeline: Jenkins, Travis CI, Circle CI, Github Actions
