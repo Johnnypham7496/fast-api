@@ -209,3 +209,6 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
     Github Actions documentation: https://docs.github.com/en/actions
 
 - A CI/CD will give us a `"runnner"` which is essentially a virtual machine. With a `vm` we will need a list of instructions for our machine to be able to build and deploy our apps just like we did with `Docker`
+
+- Github Actions Secrets: https://docs.github.com/en/rest/actions/secrets?apiVersion=2022-11-28
+    - This code is reliant on using `env variables`. We could hard code the env variables into our yml file but it's never best practice. Instead we can use `Secrets` located in the settings of our Github reposititory. This allows to store our env variables without anyone having access to them. You can either have the secrets individually our you can have specific secrets in a `Environment` settting for exmaple: secrets for testing, secrets for production code, etc
