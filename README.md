@@ -204,3 +204,8 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
     Continuous Delivery: Grab images/code -> Update Production
 
 - Most common CI/CD pipeline: Jenkins, Travis CI, Circle CI, Github Actions
+
+- For this I am currently using Github Actions. 
+    Github Actions documentation: https://docs.github.com/en/actions
+
+- A CI/CD will give us a `"runnner"` which is essentially a virtual machine. With a `vm` we will need a list of instructions for our machine to be able to build and deploy our apps just like we did with `Docker`
