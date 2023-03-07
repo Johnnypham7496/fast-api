@@ -197,3 +197,22 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - `Continuous Integration` - automated process to build, package and test applications
 
 - `Continuous Delivery` - picks up where continuous integrations ends and automated the delivery of applications
+
+- Manual Process: Make Changes -> Commit Changes -> Run Tests -> Build Image -> Deploy
+- Automated CI/CD: Makes Changes -> Commit Changes ->
+    Continuous Integration: Pull Source Code -> Install Dependencies -> Run Automated Tests -> Build Images(Docker)
+    Continuous Delivery: Grab images/code -> Update Production
+
+- Most common CI/CD pipeline: Jenkins, Travis CI, Circle CI, Github Actions
+
+- For this I am currently using Github Actions. 
+    Github Actions documentation: https://docs.github.com/en/actions
+
+- A CI/CD will give us a `"runnner"` which is essentially a virtual machine. With a `vm` we will need a list of instructions for our machine to be able to build and deploy our apps just like we did with `Docker`
+
+- Github Actions Secrets: https://docs.github.com/en/rest/actions/secrets?apiVersion=2022-11-28
+    - This code is reliant on using `env variables`. We could hard code the env variables into our yml file but it's never best practice. Instead we can use `Secrets` located in the settings of our Github reposititory. This allows to store our env variables without anyone having access to them. You can either have the secrets individually our you can have specific secrets in a `Environment` settting for exmaple: secrets for testing, secrets for production code, etc
+
+- Because our code relies on a database, once our code gets pushed and github builds a `runner`, there is no database information within the runner we will need to create a database service container
+    Creating PostgreSQL service container docs: https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers
+
