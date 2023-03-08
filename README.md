@@ -216,3 +216,7 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 - Because our code relies on a database, once our code gets pushed and github builds a `runner`, there is no database information within the runner we will need to create a database service container
     Creating PostgreSQL service container docs: https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers
 
+- Docker CI/CD documentation: https://docs.docker.com/language/java/configure-ci-cd/ 
+    - This is how we build and deploy our code with Docker
+
+- When deploying through Docker or Heroku, they will have their own secret keys that we also have to enter into our Github repository to establish the connection
