@@ -218,3 +218,5 @@ Most commonly used language to communicate with DBMS is Structured Query Languag
 
 - Docker CI/CD documentation: https://docs.docker.com/language/java/configure-ci-cd/ 
     - This is how we build and deploy our code with Docker
+
+- When deploying through Docker or Heroku, they will have their own secret keys that we also have to enter into our Github repository to establish the connection
