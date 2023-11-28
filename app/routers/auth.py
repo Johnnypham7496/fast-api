@@ -15,11 +15,11 @@ def login(user_credentials: OAuth2PasswordRequestForm = Depends(), db: Session =
     user = db.query(models.User).filter(models.User.email == user_credentials.username).first()
 
     if not user:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail = f'Invalid Credentials')
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail = 'Invalid Credentials')
 
     # this is the function we call to verify the passwords from the user and the database
     if not utils.verify(user_credentials.password, user.password):
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail = f'Invalid Credentials')
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail = 'Invalid Credentials')
 
     # create a token and return the token value
     # the data being pased into the payload below is just the user_id. Extra information can be added if you choose
